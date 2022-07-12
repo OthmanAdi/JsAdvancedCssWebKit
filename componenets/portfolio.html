@@ -12,32 +12,59 @@
 <body class="tempoHeight">
 <!--Portfolio Navbar-->
 <header id="header" class="fixed-top align-items-center">
-    <div class="container align-items-center">
+    <div class="container-fluid CFL align-items-center">
         <div id="logo">
             <h1>Othman Adi</h1>
         </div>
         <!--The Index Pages[Die untergelisteten seiten]-->
         <nav id="navbar" class="navbar">
-            <ul>
-                <li class="nav-link">Page 1</li>
-                <li class="nav-link">Page 2</li>
-                <li class="nav-link dropdown">Profile Drop-Down button</li>
+            <ul class="navUL">
+                <li class="nav-link listItem"><a href="/componenets/todoList.html"> Page 1</a></li>
+                <li class="nav-link listItem"><a href="/componenets/index.html"> Page 2 </a></li>
+                <li class="nav-link listItem dropdown">Profile Drop-Down button</li>
             </ul>
         </nav>
     </div>
 </header>
 <!--=======The Body of the Portfolio======-->
 <section id="hero">
-    <div class="hero-container">
-        <h1>My name is Othman Adi i am a Web Developer/IOS Developer</h1>
-        <h2>Below are two of my recent projects [* TodoList] & [* Vote System with Css Animated Background]</h2>
-        <a href="/componenets/todoList.html">
-            <button>Simple JS Todolist</button>
-        </a>
-        <a href="/componenets/index.html">
-            <button>Animated BG for voting system</button>
-        </a>
+    <div class="hero-container container-fluid">
+        <div class="row rowPosition">
+            <div class="col">
+                <h1>My name is Othman Adi i am a Web Developer/IOS Developer</h1>
+                <h2 class="textShadowMe">Below are two of my recent projects [* TodoList] & [* Vote System with Css
+                    Animated Background]</h2>
+                <a href="/componenets/todoList.html">
+                    <button class="hoverEffect">Simple JS Todolist</button>
+                </a>
+                <a href="/componenets/index.html">
+                    <button class="hoverEffect">Animated BG for voting system</button>
+                </a>
+            </div>
+        </div>
     </div>
 </section>
+<br/> <!--empty line break-->
+<hr/> <!--Horizontal line break-->
+<div class="progressBarDiv">
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-dark" role="progressbar" style="width: 65%" aria-valuenow="65"
+             aria-valuemin="0" aria-valuemax="100">HTML
+        </div>
+    </div>
+
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-dark" role="progressbar" style="width: 40%" aria-valuenow="40"
+             aria-valuemin="0" aria-valuemax="100">CSS
+        </div>
+    </div>
+
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-dark" role="progressbar" style="width: 50%" aria-valuenow="20"
+             aria-valuemin="0" aria-valuemax="70">Javascript
+        </div>
+    </div>
+
+</div> <!--Ende von progressBarDiv-->
 </body>
 </html>

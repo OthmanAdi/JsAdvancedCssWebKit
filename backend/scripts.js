@@ -21,3 +21,11 @@ voteDOWN.addEventListener("click", () => {
 function updateVote() {
     votingPoll.innerHTML = theVote;
 }
+
+function showTemplate() {
+    console.log("has been clicked!");
+    let template = document.querySelector("template");
+    let clonedTemplateContent = template.content.cloneNode(true);
+    document.querySelector(".template_body").appendChild(clonedTemplateContent);
+    template.innerHTML = "";
+}

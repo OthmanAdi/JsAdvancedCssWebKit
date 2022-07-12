@@ -7,13 +7,88 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/portfolioStyle.css">
+
 </head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .containerVotingPoll {
+        display: grid;
+        height: 100vh;
+        background: radial-gradient(ellipse at top, #82dbd8, #f9c2ee, #ffffff, transparent),
+        radial-gradient(ellipse at top, #fcf69c, #22a584, #c4e2dd, transparent);
+        -webkit-animation: firstCssAnimation 12s ease infinite;
+        background-size: 400% 400%;
+    }
+
+    @-webkit-keyframes firstCssAnimation {
+        0% {
+            background-position: 0 50%;
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0 50%
+        }
+    }
+</style>
+
 <body>
-<div class="container-fluid text-center">
+<!--Start of Navbar-->
+<header id="header" class="fixed-top align-items-center">
+    <div class="container-fluid CFL align-items-center">
+        <div id="logo">
+            <h1>Othman Adi</h1>
+        </div>
+        <!--The Index Pages[Die untergelisteten seiten]-->
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li class="nav-link"><a href="/componenets/todoList.html"> Page 1</a></li>
+                <li class="nav-link"><a href="/componenets/index.html"> Page 2 </a></li>
+                <li class="nav-link dropdown">Profile Drop-Down button</li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!--End of Navbar-->
+<div class="container-fluid containerVotingPoll text-center">
     <h3 class="votingPoll">.OFF.</h3>
     <button class="voteUp btn btn-outline-danger">Vote Up</button>
     <button class="voteDown btn btn-outline-warning">Vote Down</button>
 </div>
+
+<script>
+    let votingPoll = document.querySelector(".votingPoll");
+    let voteUP = document.querySelector(".voteUp");
+    let voteDOWN = document.querySelector(".voteDown");
+
+    let theVote = 0;
+
+    updateVote();
+
+    voteUP.addEventListener("click", () => {
+        theVote++;
+        updateVote();
+        // theVote = theVote + 1; ALT
+    });
+
+    voteDOWN.addEventListener("click", () => {
+        theVote--;
+        updateVote();
+        // theVote = theVote - 1; ALT
+    });
+
+    function updateVote() {
+        votingPoll.innerHTML = theVote;
+    }
+</script>
+
 <script src="/backend/scripts.js"></script>
 </body>
 </html>

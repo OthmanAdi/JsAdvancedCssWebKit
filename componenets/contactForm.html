@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Template triggered with JS</title>
+    <link rel="stylesheet" href="/styles/templateStyle.css">
+    <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+</head>
+<body>
+<div class="template_container">
+    <p>Call us</p>
+    <input type="radio">
+    <p>Write the support team</p>
+    <input type="radio" onclick="showTemplate()">
+</div>
+
+<div class="template_body">
+    <template>
+        <form>
+            <input type="email" placeholder="enter your mail address">
+            <input type="text" placeholder="we will gladly take your question">
+            <button onclick="party.confetti(this)" class="submit" type="submit">Send your Request</button>
+        </form>
+    </template>
+</div>
+<script src="/backend/scripts.js"></script>
+</body>
+</html>

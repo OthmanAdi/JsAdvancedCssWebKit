@@ -1,0 +1,16 @@
+* {
+    background: #c4e2dd;
+}
+
+.template_container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+input{
+    background: radial-gradient(#c4e2dd,#82dbd8,#f9c2ee,transparent);
+    background-size: 200% 200%;
+    border: none;
+    box-shadow: 0 10px 40px #625f5f;
+}

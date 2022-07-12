@@ -3,7 +3,7 @@
     margin: 0;
 }
 
-.container-fluid {
+.containerVotingPoll {
     display: grid;
     height: 100vh;
     background: radial-gradient(ellipse at top, #82dbd8, #f9c2ee, #ffffff, transparent),
